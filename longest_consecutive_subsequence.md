@@ -50,7 +50,7 @@ Após um primeiro contato, percebe-se facilmente que a questão é bem parecida 
 4. Após isso, passe no vetor `lis` e recupere a posição que marca a maior subsequência consecutiva crescente.
 5. Agora, basta iniciar um `backtrack` a partir da posição que termina a sequência para descobrir qual será os índices da sequência formada.
 
-## Complexidade
+### Complexidade
 
 Complexidade: O(n²).
 
@@ -58,7 +58,7 @@ Complexidade: O(n²).
 
 ![977 TLE](img/977F_TLE.jpg)
 
-## Código
+### Código
 
 ```cpp
 #include <bits/stdc++.h>
@@ -133,7 +133,7 @@ Como a abordagem quadrática anterior causou TLE (time limit exceeded), devemos 
 3. Percorrer o input atualizando `dp` da seguinte maneira: `dp[Ai] = max(dp[Ai], dp[Ai-1]+1)`. Após isso, o maior elemento de `dp` será a resposta.
 4. Para recuperar os índices, deve-se encontrar primeiramente a posição do maior elemento (K) e, a partir dele, ir no sentido reverso e encontrar o seu anterior (K-1), e assim sucessivamente.
 
-## Complexidade
+### Complexidade
 
 Complexidade: O(n).
 
@@ -142,7 +142,7 @@ Complexidade: O(n).
 ![977 ACP](img/977F_ACP.jpg)
 
 
-## Código
+### Código
 
 ```cpp
 #include <bits/stdc++.h>
