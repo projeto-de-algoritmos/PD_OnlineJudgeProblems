@@ -80,7 +80,7 @@ Complexidade: O(nm).
 
 * Resposta aceita:
 
-![change coin ACP](img/change_coin_ACP.jpg)
+![change coin ACP](img/coin_change_ACP.jpg)
 
 
 ## Código

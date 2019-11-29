@@ -50,7 +50,7 @@ Pode-se resolver o problema da mochila tanto de forma recursiva quanto iterativa
 
 ### Complexidade
 
-Complexidade: O(n²).
+Complexidade: O(nW).
 
 * Resposta aceita:
 

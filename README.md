@@ -23,7 +23,9 @@ Optou-se por resolver três problemas de programação dinâmica em diferentes p
    1.  Link para o problema: [977F](https://codeforces.com/contest/977/problem/F)
    2.  Solução: [Solução variante LIS](./longest_consecutive_subsequence.md).
    3.  Empecilho: algoritmos quadráticos excedem o tempo da questão.
-3. Número de trocos possíveis: problema variante do coin change, solicita quantas combinações de troco em um conjunto de moedas `S` considerando um valor de troco `N`.
+3. Número de trocos possíveis: problema variante do coin change, solicita quantas combinações de troco em um conjunto de moedas `vi` considerando um valor de troco `N`.
+   1.  Link para o problema: [Coin Change](https://www.hackerrank.com/challenges/coin-change/problem)
+   2.  Solução: [Solução variante Coin Change](./the_coin_change_problem.md).
 
 ## Screenshots
 
