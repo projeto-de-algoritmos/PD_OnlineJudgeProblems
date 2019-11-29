@@ -123,3 +123,66 @@ int main() {
     return 0;
 }
 ```
+
+## Resolução 2
+
+Como a abordagem quadrática anterior causou TLE (time limit exceeded), devemos recorrer a abordagens lineares, logarítmicas, ou uma mesclagem de ambas. Nesse caso, pode-se resolver o problema em questão com a seguinte abordagem linear:
+
+1. `dp[x]`: tamanho da maior subsequência com o último elemento igual a x.
+2. Considerando que `dp` seja um `map`/`HashMap`, pode-se inicializar os valores de `dp` com 0 (default em c++); e
+3. Percorrer o input atualizando `dp` da seguinte maneira: `dp[Ai] = max(dp[Ai], dp[Ai-1]+1)`. Após isso, o maior elemento de `dp` será a resposta.
+4. Para recuperar os índices, deve-se encontrar primeiramente a posição do maior elemento (K) e, a partir dele, ir no sentido reverso e encontrar o seu anterior (K-1), e assim sucessivamente.
+
+## Complexidade
+
+Complexidade: O(n).
+
+* Resposta aceita: 
+
+![977 ACP](img/977F_ACP.jpg)
+
+
+## Código
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+	int n;
+	cin >> n;
+
+	vector<int> a(n);
+	for (auto &i : a)
+		cin >> i;
+	
+	map<int, int> dp;
+	
+	int ans = 0;
+	int lst = 0;
+	for (int i = 0; i < n; ++i) {
+		int x = a[i];
+		dp[x] = dp[x - 1] + 1;
+		if (ans < dp[x]) {
+			ans = dp[x];
+			lst = x;
+		}
+	}
+	
+	vector<int> res;
+	for (int i = n - 1; i >= 0; --i) {
+		if (a[i] == lst) {
+			res.push_back(i);
+			--lst;
+		}
+	}
+	reverse(res.begin(), res.end());
+	
+	cout << ans << endl;
+	for (auto it : res)
+		cout << it << " ";
+    cout << endl;
+	
+	return 0;
+}
+```
